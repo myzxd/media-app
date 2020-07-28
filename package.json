@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "aoao-boss-team-h5",
-  "version": "2.9.2",
+  "version": "2.9.3",
   "description": "Boss老板H5",
   "main": "index.js",
   "scripts": {

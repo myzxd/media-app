@@ -17,7 +17,7 @@ const routes = [
   // 业务相关
   {
     title: '首页',
-    path: '/Manage/Home',
+    path: '/',
     component: () => import('../../routes/manage/home/index.jsx').catch(err => onRouteError(`${err}`)),
   },
   {
