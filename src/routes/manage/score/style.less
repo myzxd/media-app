@@ -1,0 +1,290 @@
+// 签到页面的容器
+.account-score-container {
+  // padding-top: 45px;
+  // padding-bottom: 47px;
+  // height: calc(100% - 45px - 47px);
+  background:rgba(249,251,252,1);
+  height: 100%;
+}
+
+// 积分内容容器
+.account-score-content-container {
+  padding-top: .6rem;
+  height:1rem;
+  background:rgba(239,61,49,1);
+  width: 100%;
+  position: relative;
+  .account-score-content-rank{
+    height: .58rem;
+    width:3.46rem;
+    background-color: #fff;
+    position: absolute;
+    left: .145rem;
+    bottom: -.45rem;
+    border-radius: .05rem;
+    display: flex;
+    box-shadow:0 5px 14px 0 rgba(0,0,0,0.05);
+    .account-score-content-rank-site{
+      flex: 1;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-left: .15rem;
+      font-size: .14rem;
+      color: #4A4A4B;
+    }
+    .account-score-content-rank-btn-wrap{
+      flex:1;
+      padding-right: .15rem;
+      font-size: .14rem;
+      color: #4A4A4B;
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      span{
+        font-size: .16rem;
+        color:#EF3D31;
+      }
+      svg{
+        color: rgb(160,160,160);
+      }
+    }
+  }
+}
+.account-core-earn{
+  margin-top: .63rem;
+}
+// 积分内容容器-文字
+.account-score-content-text {
+  width: 100%;
+  text-align: center;
+  font-size:.12rem;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:.17rem;
+}
+// 积分内容容器-数字
+.account-score-content-number {
+  margin-top: .1rem;
+  width: 100%;
+  text-align: center;
+  font-size:.3rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:.3rem;
+}
+
+.account-row-content-container {
+  margin: .16rem 0px;
+  overflow: hidden;
+}
+
+.account-row-content-title {
+  padding: 0px .16rem;
+  font-size:.16rem;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(0,0,0,0.7);
+  line-height:.18rem;
+}
+.account-row-content-click{
+  height: 11%;
+  width: 30%;
+  position: absolute;
+  left: 3%;
+  // background-color: green;
+}
+.account-row-content-small-card {
+  width:1.4rem;
+  height:1.02rem;
+  background:rgba(255,255,255,1);
+  box-shadow:0 .05rem .15rem 0 rgba(0,0,0,0.05);
+  border-radius:.06rem;
+  border:.01rem solid rgba(0,0,0,0.05);
+}
+
+.account-row-content-large-card {
+  height:1.02rem;
+  background:rgba(255,255,255,1);
+  box-shadow:0 .05rem .15rem 0 rgba(0,0,0,0.05);
+  border-radius:.06rem;
+  border:.01rem solid rgba(0,0,0,0.05);
+
+  font-family:PingFangSC-Semibold,PingFang SC;
+  font-weight:600;
+  color:rgba(0,0,0,0.46);
+  line-height:1.02rem;
+  text-align: center;
+}
+
+
+
+.account-score-detail-wrap{
+  overflow: auto;
+  padding-top: .45rem;
+  //background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.account-score-detail-date{
+  padding: .16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .16rem;
+  color: #B3B5B5;
+}
+.account-score-detail-ul-wrap{
+  width: 100%;
+  height: calc(100vh - 1rem);
+  overflow: auto;
+  .account-score-detail-content{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    .account-score-detail-no-data{
+      width: 100%;
+      margin-top: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: .13rem;
+      color: #767777;
+      background-color: rgb(245, 245, 249);
+      img{
+        width: .62rem;
+        display: block;
+        margin-bottom: .17rem;
+      }
+    }
+    li{
+      display: flex;
+      height: .63rem;
+      border-bottom: .005rem solid #D8D8D8;
+      padding: 0 .145rem;
+      box-sizing: border-box;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .account-score-detail-content-li-left{
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        .account-score-detail-content-li-left-type{
+          font-size: .16rem;
+        }
+        .account-score-detail-content-li-left-date{
+          font-size: .14rem;
+          color: #ccc;
+          margin-top: .05rem;
+        }
+      }
+      .account-score-detail-content-li-right{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: .17rem;
+        color: #2DCF90;
+      }
+      .account-score-detail-content-li-right-pay{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: .17rem;
+        color:#EF001D;
+      }
+    }
+  }
+
+}
+.account-score-rank-wrap{
+  overflow: auto;
+  padding-top: .45rem;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  .account-score-rank-content{
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    .account-score-rank-no-data{
+      width: 100%;
+      margin-top: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: .13rem;
+      color: #767777;
+      background-color: rgb(245, 245, 249);
+      img{
+        width: .62rem;
+        display: block;
+        margin-bottom: .17rem;
+      }
+    }
+    li {
+      display: flex;
+      height: .63rem;
+      border-bottom: .005rem solid #D8D8D8;
+      padding: 0 .145rem;
+      box-sizing: border-box;
+      &.account-score-rank-li-bg{
+        background-color: #F5F5F5!important;
+      }
+      &:last-child{
+        border-bottom: 0;
+      }
+      .account-score-rank-li-number{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1;
+        .account-score-rank-li-number-img{
+          width: .27rem;
+          height: .27rem;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .account-score-rank-li-info{
+        display: flex;
+        flex: 6;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: .1rem;
+        box-sizing: border-box;
+        .account-score-rank-li-info-name{
+          font-size: .17rem;
+          color:#000;
+          font-weight: 400;
+        }
+        .account-score-rank-li-info-phone{
+          font-size: .14rem;
+          color: #D8D8D8;
+          margin-top: .05rem;
+        }
+      }
+      .account-score-rank-li-score{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 3;
+        font-size: .17rem;
+        color: #3589DE;
+      }
+    }
+  }
+}

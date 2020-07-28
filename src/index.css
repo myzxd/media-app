@@ -1,0 +1,62 @@
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+:global .am-list-body {
+  background-color: #F9FBFC !important;
+}
+:global .am-list-body::after {
+  display: none !important;
+}
+:global .am-list-body::before {
+  display: none !important;
+}
+:global .am-list-extra {
+  color: rgba(0,0,0,.8) !important;
+  font-weight: 400 !important;
+  flex-basis: initial !important;
+}
+:global .am-list-item .am-list-line .am-list-content {
+  color: rgba(0,0,0,.6) !important;
+  font-weight: 400 !important;
+}
+:global .am-input-item .am-list-line .am-input-label {
+  color: rgba(0,0,0,.6) !important;
+  letter-spacing: 1px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+}
+
+
+:global .am-navbar{
+  height: .45rem!important;
+}
+:global .am-navbar-light .am-navbar-title{
+  font-size: .18rem!important;
+}
+:global .am-navbar-left{
+  font-size: .15rem!important;
+  padding-left: .15rem!important;
+}
+:global .am-navbar-right{
+  font-size: .15rem!important;
+  padding-right: .15rem!important;
+}
+:global .am-icon-lg{
+  width: .24rem!important;
+  height: .24rem!important;
+}
+:global .am-modal-transparent{
+  width: 2.7rem!important;
+}
+:global .am-modal-title{
+  font-size: .18rem!important;
+}
+:global .am-modal-button{
+  font-size: .18rem!important;
+  height: .5rem!important;
+  line-height: .5rem!important;
+}
