@@ -6,78 +6,8 @@
   <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
   <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
   <meta HTTP-EQUIV="expires" CONTENT="0">
-  <title>BOSS</title>
+  <title>青创影视传媒</title>
   <script>
-  // 判断配置文件是否注册，用于判断android的功能注册
-  const isConfigRegister = function () {
-    if (window.localStorage.getItem('appConfig')) {
-      return true;
-    }
-    return false;
-  }
-
-  // 初始化客户端桥接函数
-  function setupWebViewJavascriptBridge(callback) {
-    if (window.WebViewJavascriptBridge) {
-      return callback(WebViewJavascriptBridge);
-    }
-
-    if (window.WVJBCallbacks) {
-      return window.WVJBCallbacks.push(callback);
-    }
-
-    // 兼容android的钩子函数
-    document.addEventListener('WebViewJavascriptBridgeReady' , function() {
-      callback(WebViewJavascriptBridge)
-    },false);
-
-    // 初始化内置浏览iframe
-    window.WVJBCallbacks = [callback];
-    var WVJBIframe = document.createElement('iframe');
-    WVJBIframe.style.display = 'none';
-    WVJBIframe.src = 'https://__bridge_loaded__';
-    document.documentElement.appendChild(WVJBIframe);
-    setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
-  }
-
-  // 注册js bridge的钩子函数到全局变量中
-  setupWebViewJavascriptBridge(function(bridge) {
-    // 兼容android的钩子函数
-    if (bridge && bridge.init) {
-      // 兼容Android, 获取config
-      bridge.init(function(message, responseCallback) {
-        // 判断配置文件是否加载，没有则加载配置文件
-        if (isConfigRegister() !== true) {
-          // 临时存储到本地存储
-          window.localStorage.setItem('appConfig', message);
-          window.location.reload();
-        }
-      });
-    }
-
-    // 配置桥接的对象
-    if (bridge) {
-      window.bridge = bridge;
-
-      // 注册android的回调钩子函数
-      if (window.hookObject && window.isHookRegister !== true) {
-        console.log('register android hooks');
-        window.hookObject.init();
-      }
-    } else {
-      window.bridge = {};
-    }
-
-    // 判断配置文件是否存在
-    if (window.appConfig) {
-      console.log('register config success', window.appConfig);
-    } else {
-      console.log('register config failure');
-    }
-
-    console.log('register bridge', bridge);
-  })
-
   // 设置根标签html的font-size
   const { clientWidth } =  document.documentElement;
   // 计算rem基础配置：设计图以375px为准时，px rem比例为1：100 （即：375px宽度的设计稿，量出是100px，则为1rem）
