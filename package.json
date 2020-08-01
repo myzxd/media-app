@@ -43,7 +43,7 @@
   "dependencies": {
     "antd-mobile": "^2.2.14",
     "crypto-js": "^3.1.9-1",
-    "dot-prop": "^5.0.1",
+    "dot-prop": "^5.1.1",
     "dva": "^2.4.1",
     "dva-loading": "^3.0.4",
     "is_js": "^0.9.0",
